@@ -1,0 +1,85 @@
+Section 1: 
+NumPy Basics (10 Questions)
+Create a NumPy array with values from 1 to 10. Print its type and shape.
+Create a 3x3 matrix filled with zeros and another 3x3 matrix filled with ones.
+Generate an array of 10 evenly spaced numbers between 0 and 1.
+Create a 5x5 identity matrix.
+Generate a random array of 10 integers between 1 and 100. Sort the array.
+Find:
+Minimum value
+Maximum value
+Mean
+Standard deviation
+of a given NumPy array.
+Reshape a 1D array of 12 elements into a 3x4 matrix.
+Perform element-wise operations:
+Add 5 to every element
+Multiply all elements by 2
+Create two arrays and perform:
+Addition
+Subtraction
+Multiplication
+Dot product
+Extract:
+First 3 elements
+Last 3 elements
+Middle elements
+from a NumPy array.
+###################################################
+import numpy as np
+
+# 1. Array from 1 to 10 — type and shape
+arr = np.arange(1, 11)
+print(arr)
+print(type(arr))
+print(arr.shape)
+
+# 2. 3x3 zeros and ones
+zeros = np.zeros((3, 3))
+ones = np.ones((3, 3))
+print(zeros)
+print(ones)
+
+# 3. 10 evenly spaced numbers between 0 and 1
+linspace_arr = np.linspace(0, 1, 10)
+print(linspace_arr)
+
+# 4. 5x5 identity matrix
+identity = np.eye(5)
+print(identity)
+
+# 5. Random 10 integers (1–100), then sort
+rand_arr = np.random.randint(1, 101, size=10)
+print("Original:", rand_arr)
+print("Sorted:", np.sort(rand_arr))
+
+# 6. Min, max, mean, std of a given array
+data = np.array([12, 45, 7, 89, 23, 56, 34, 78, 90, 11])
+print("Min:", np.min(data))
+print("Max:", np.max(data))
+print("Mean:", np.mean(data))
+print("Std:", np.std(data))
+
+# 7. Reshape 1D (12 elements) → 3x4
+arr_1d = np.arange(12)
+matrix_3x4 = arr_1d.reshape(3, 4)
+print(matrix_3x4)
+
+# 8. Element-wise: +5 and *2
+arr = np.array([1, 2, 3, 4, 5])
+print(arr + 5)
+print(arr * 2)
+
+# 9. Two arrays — add, subtract, multiply, dot product
+a = np.array([1, 2, 3])
+b = np.array([4, 5, 6])
+print("Addition:", a + b)
+print("Subtraction:", a - b)
+print("Multiplication:", a * b)
+print("Dot product:", np.dot(a, b))
+
+# 10. Extract first 3, last 3, middle elements
+arr = np.array([10, 20, 30, 40, 50, 60, 70, 80, 90])
+print("First 3:", arr[:3])
+print("Last 3:", arr[-3:])
+print("Middle:", arr[3:-3])   # or arr[len(arr)//2 - 1 : len(arr)//2 + 2] depending on need
